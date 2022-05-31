@@ -2,7 +2,8 @@ import React, {useState, useEffect, useContext} from "react";
 import './App.css';
 import {Context} from "./context/Context"
 import HighlightCard from "./components/HighlightCard";
-import HighlightVideo from "./components/HighlightVideo";
+import Categories from "./components/Categories";
+
 
 
 
@@ -28,11 +29,15 @@ function App() {
   // console.log(footballData)
 
   return (
-    <div className="App">
+    <>
+    <h1 className="bg-dark text-light mb-0 p-4 text-center">Football Highlights</h1>
+    <Categories footballData={footballData}/>
+    <div className="App pt-4">
       {footballData.map(((highlight, i) => (
           <HighlightCard key={i} footballData={highlight} />
       )))}
     </div>
+</>
   );
 }
 

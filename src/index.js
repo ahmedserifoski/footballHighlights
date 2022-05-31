@@ -6,7 +6,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import {ContextProvider} from "./context/Context"
-import HighlightVideo from './components/HighlightVideo';
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -17,8 +17,6 @@ root.render(
     <Router>
       <Routes>
         <Route path="/" element={<App />}/>
-        <Route path="HighlightVideo" element={<HighlightVideo />} />
-
       </Routes>
 
     </Router>

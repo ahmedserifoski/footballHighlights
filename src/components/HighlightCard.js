@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 
 import { Card, Button } from 'react-bootstrap'
-import HighlightVideo from './HighlightVideo'
 
 const HighlightCard = ({footballData}) => {
 
@@ -18,7 +17,7 @@ const HighlightCard = ({footballData}) => {
 
   return (
 
-    <Card className='m-3' style={{ width: '30rem'}}>
+    <Card className='HighlightCard m-3 bg-dark text-light' >
       <Card.Img variant="top" src={footballData.thumbnail} />
 
       <Card.Body>
