@@ -1,17 +1,12 @@
-import React, {useState, useEffect, useContext} from "react";
+import React, {useState, useEffect} from "react";
 import './App.css';
-import {Context} from "./context/Context"
-import HighlightCard from "./components/HighlightCard";
-import Categories from "./components/Categories";
 
+import {Routes, Route} from "react-router-dom"
 
-
+import Home from "./pages/Home"
 
 
 function App() {
-
-  // const {footballData} = useContext(Context)  
-
   const [footballData, setFootballData] = useState([])
   const [filteredLeague, setFilteredLeague] = useState([])
 
@@ -33,19 +28,29 @@ function App() {
     
   }, [])
 
-  console.log(filteredLeague)
+  console.log(footballData)
 
   return (
-    <>
-    <h1 className="bg-dark text-light mb-0 p-4 text-center">Football Highlights</h1>
-    <Categories filterLeague={filterLeague} footballData={footballData}/>
-    <div className="App pt-4">
-      {filteredLeague.map(((highlight, i) => (
-          <HighlightCard key={i} footballData={highlight} />
-      )))}
-    </div>
-</>
+  <>
+  
+  </>
   );
 }
 
 export default App;
+
+
+{/* <h1 className="bg-dark text-light mb-0 p-4 text-center">Football Highlights</h1>
+    <Categories filterLeague={filterLeague} />
+    <div className="App pt-4">
+      {filteredLeague.length != 0 ? 
+      filteredLeague.map(((highlight, i) => (
+          <HighlightCard key={i} footballData={highlight} />
+      ))) : 
+        // "Nothin to see here really"
+      footballData.map(((highlight, i) => (
+        <HighlightCard key={i} footballData={highlight} />
+    )))
+    }
+    </div> 
+  */}

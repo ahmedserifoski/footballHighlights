@@ -5,8 +5,10 @@ const ContextProvider = (props) => {
 
   const alma = "alma"
   const [footballData, setFootballData] = useState([])
+  const [england, setEngland] = useState([])
 
-  // setFootballData("Alma")
+  
+// console.log(footballData.competition)
 
   useEffect(() => {
     const fetchFootballData = async () => {

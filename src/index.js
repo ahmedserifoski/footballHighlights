@@ -3,8 +3,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import Home from "./pages/Home"
 import reportWebVitals from './reportWebVitals';
-import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
+import {BrowserRouter, Routes, Route} from "react-router-dom"
 import {ContextProvider} from "./context/Context"
 
 
@@ -13,13 +14,15 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // <React.StrictMode>
     <ContextProvider>
-      {/* <App/> */}
-    <Router>
-      <Routes>
-        <Route path="/" element={<App />}/>
-      </Routes>
+      <BrowserRouter>
+        <Routes>
+          {/* <Route path="/home" element={<Home />} /> */}
+          <Route exact path="/" element={<App />} />
 
-    </Router>
+          {/* <Route path="expenses" element={<Expenses />} />
+          <Route path="invoices" element={<Invoices />} /> */}
+      </Routes>
+    </BrowserRouter>
     </ContextProvider>
   // </React.StrictMode>
 );
