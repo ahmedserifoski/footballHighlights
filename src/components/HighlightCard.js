@@ -15,10 +15,11 @@ const HighlightCard = ({footballData}) => {
     // const show = (showIframe) => {
 
     // }
+    console.log(footballData)
 
     return (
         <Card className="HighlightCard mx-3 mb-3 bg-dark text-light">
-            <Card.Img variant="top" src={footballData.thumbnail} />
+            <Card.Img variant="top" src={footballData.thumbnail == false ? require('./football.jpg') : footballData.thumbnail} />
 
             <Card.Body>
                 <Card.Title>{footballData.title}</Card.Title>

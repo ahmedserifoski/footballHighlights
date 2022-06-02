@@ -67,11 +67,11 @@ function App() {
                 footballData.map((highlight, i) => (
                     <HighlightCard key={i} footballData={highlight} />
                 ))}
-            {window.location.href.split("/")[3] === "england" && englandHighlights != 0 ? englandHighlights : "No highlights at the moment"}
-            {window.location.href.split("/")[3] === "spain" && spainHighlights != 0 ? spainHighlights : "No highlights at the moment"}
-            {window.location.href.split("/")[3] === "germany" && germanyHighlights != 0 ? germanyHighlights : "No highlights at the moment"}
-            {window.location.href.split("/")[3] === "italy" && italyHighlights != 0 ? italyHighlights : "No highlights at the moment"}
-            {window.location.href.split("/")[3] === "france" && franceHighlights != 0 ? franceHighlights : "No highlights at the moment"}
+            {window.location.href.split("/")[3] === "england" && englandHighlights}
+            {window.location.href.split("/")[3] === "spain" && spainHighlights }
+            {window.location.href.split("/")[3] === "germany" && germanyHighlights}
+            {window.location.href.split("/")[3] === "italy" && italyHighlights }
+            {window.location.href.split("/")[3] === "france" && franceHighlights}
         </div>
     );
 }
