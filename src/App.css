@@ -11,8 +11,19 @@ body {
   background-color: rgb(0, 0, 0);
 }
 
+.Categories {
+  flex: 0 0 100%;
+}
+
+.Title {
+  flex: 0 0 90%;
+}
 
 
 .HighlightCard {
   width: 18rem;
+}
+
+.link {
+  text-decoration: none;
 }

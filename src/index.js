@@ -16,8 +16,12 @@ root.render(
     <ContextProvider>
       <BrowserRouter>
         <Routes>
-          {/* <Route path="/home" element={<Home />} /> */}
           <Route exact path="/" element={<App />} />
+          <Route path="/england" element={<App />} />
+          <Route path="/spain" element={<App />} />
+          <Route path="/italy" element={<App />} />
+          <Route path="/france" element={<App />} />
+          <Route path="/germany" element={<App />} />
 
           {/* <Route path="expenses" element={<Expenses />} />
           <Route path="invoices" element={<Invoices />} /> */}

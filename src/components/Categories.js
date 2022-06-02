@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {Badge, Button} from "react-bootstrap"
+import {Button} from "react-bootstrap"
 
 import { Link } from "react-router-dom";
 
@@ -9,17 +9,16 @@ import { Link } from "react-router-dom";
     //add event listener
     //make a function that takes data from api and filters results
 
-const Categories = ({filterLeague}) => {
-
-
-
-    const [competition, setCompetition] = useState()
-    
+const Categories = () => {
 
   return (
-   <div>
-        <button><Link to="/">Home</Link> |{" "}</button> 
-        {/* <Link to="/expenses">Expenses</Link> */}
+   <div className='Categories mt-5 mb-5'>
+        <Button className='button mx-2'><Link className='link text-light' to="/">Home</Link></Button> 
+        <Button className='button mx-2' ><Link className='link text-light' to="/spain">Spain</Link>{" "}</Button> 
+        <Button className='button mx-2' ><Link className='link text-light' to="/england">England</Link>{" "}</Button>
+        <Button className='button mx-2' ><Link className='link text-light' to="/germany">Germany</Link>{" "}</Button> 
+        <Button className='button mx-2' ><Link className='link text-light' to="/france">France</Link>{" "}</Button> 
+        <Button className='button mx-2' ><Link className='link text-light' to="/italy">Italy</Link>{" "}</Button> 
    </div>
   )
 }

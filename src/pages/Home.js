@@ -24,7 +24,7 @@ const Home = ({footballData}) => {
 
   return (
     <div>
-        <h1 className="bg-dark text-light mb-0 p-4 text-center">Football Highlights</h1>
+        
         <Categories/>
         {/* {allLeagues} */}
     </div>

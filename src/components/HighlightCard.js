@@ -17,7 +17,7 @@ const HighlightCard = ({footballData}) => {
     // }
 
     return (
-        <Card className="HighlightCard m-3 bg-dark text-light">
+        <Card className="HighlightCard mx-3 mb-3 bg-dark text-light">
             <Card.Img variant="top" src={footballData.thumbnail} />
 
             <Card.Body>
