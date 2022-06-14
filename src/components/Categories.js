@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 const Categories = () => {
 
   return (
-   <div className='Categories mt-5 mb-5'>
+   <div className='Categories mt-4 mb-5'>
         <Button className='button mx-2 my-3'><Link className='link text-light' to="/">Home</Link></Button> 
         <Button className='button mx-2' ><Link className='link text-light' to="/spain">Spain</Link>{" "}</Button> 
         <Button className='button mx-2' ><Link className='link text-light' to="/england">England</Link>{" "}</Button>

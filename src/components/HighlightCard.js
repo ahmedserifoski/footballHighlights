@@ -15,14 +15,14 @@ const HighlightCard = ({footballData}) => {
     // const show = (showIframe) => {
 
     // }
-    console.log(footballData)
+    console.log(footballData.thumbnail === true)
 
     return (
-        <Card className="HighlightCard mx-3 mb-3 bg-dark text-light">
+        <Card className="HighlightCard  mx-3 mb-3 bg-dark text-light">
             <Card.Img variant="top" src={footballData.thumbnail == false ? require('./football.jpg') : footballData.thumbnail} />
 
-            <Card.Body>
-                <Card.Title>{footballData.title}</Card.Title>
+            <Card.Body className="d-flex flex-column justify-content-end pb-4">
+                <Card.Title className="pb-3">{footballData.title}</Card.Title>
                 <a href={matchView}>
                     <Button variant="primary">Watch Highlight</Button>{" "}
                 </a>

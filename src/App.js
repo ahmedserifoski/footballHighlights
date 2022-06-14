@@ -43,6 +43,13 @@ function App() {
         <HighlightCard key={i} footballData={highlight} />
     ));
 
+    const international = footballData.filter((highlight) =>
+        highlight.competition.includes("INTERNATIONAL" || "CONCACAF" || "UEFA")
+    );
+    const internationalHighlights = international.map((highlight, i) => (
+        <HighlightCard key={i} footballData={highlight} />
+    ));
+
     useEffect(() => {
         const fetchFootballData = async () => {
             const res = await fetch(
@@ -59,7 +66,7 @@ function App() {
 
     return (
         <div className="App">
-            <h1 className="Title bg-dark text-light m-3 p-4 text-center rounded">
+            <h1 className="Title bg-dark text-light mt-3 p-4 text-center rounded">
                 Football Highlights
             </h1>
             <Categories />
@@ -72,6 +79,7 @@ function App() {
             {window.location.href.split("/")[3] === "germany" && germanyHighlights}
             {window.location.href.split("/")[3] === "italy" && italyHighlights }
             {window.location.href.split("/")[3] === "france" && franceHighlights}
+            {window.location.href.split("/")[3] === "international" || "concacaf" || "uefa" && franceHighlights}
         </div>
     );
 }
