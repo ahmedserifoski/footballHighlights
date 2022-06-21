@@ -22,6 +22,7 @@ root.render(
           <Route path="/italy" element={<App />} />
           <Route path="/france" element={<App />} />
           <Route path="/germany" element={<App />} />
+          <Route path="/international" element={<App />} />
 
           {/* <Route path="expenses" element={<Expenses />} />
           <Route path="invoices" element={<Invoices />} /> */}

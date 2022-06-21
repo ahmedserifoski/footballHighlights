@@ -19,6 +19,7 @@ const Categories = () => {
         <Button className='button mx-2' ><Link className='link text-light' to="/germany">Germany</Link>{" "}</Button> 
         <Button className='button mx-2' ><Link className='link text-light' to="/france">France</Link>{" "}</Button> 
         <Button className='button mx-2' ><Link className='link text-light' to="/italy">Italy</Link>{" "}</Button> 
+        <Button className='button mx-2' ><Link className='link text-light' to="/international">International</Link>{" "}</Button> 
    </div>
   )
 }

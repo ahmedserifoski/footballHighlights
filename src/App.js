@@ -44,8 +44,9 @@ function App() {
     ));
 
     const international = footballData.filter((highlight) =>
-        highlight.competition.includes("INTERNATIONAL" || "CONCACAF" || "UEFA")
+        highlight.competition.includes("UEFA NATIONS LEAGUE" || "INTERNATIONAL" || "CONCACAF")
     );
+    // "INTERNATIONAL" || "UEFA" || "UEFA NATIONS LEAGUE" || "CONCACAF"
     const internationalHighlights = international.map((highlight, i) => (
         <HighlightCard key={i} footballData={highlight} />
     ));
@@ -79,7 +80,7 @@ function App() {
             {window.location.href.split("/")[3] === "germany" && germanyHighlights}
             {window.location.href.split("/")[3] === "italy" && italyHighlights }
             {window.location.href.split("/")[3] === "france" && franceHighlights}
-            {window.location.href.split("/")[3] === "international" || "concacaf" || "uefa" && franceHighlights}
+            {window.location.href.split("/")[3] === "international" && internationalHighlights}
         </div>
     );
 }
